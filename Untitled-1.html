@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Login Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background: #fff;
+      border: 1px solid #dbdbdb;
+      padding: 40px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #262626;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #dbdbdb;
+      border-radius: 4px;
+      background-color: #fafafa;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #3897f0;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3182ce;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Instagram</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Phone number, username, or email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("loginForm");
+
+    form.addEventListener("submit", function(event){
+      event.preventDefault(); // prevent page reload
+
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      // Print to browser console
+      console.log("Username typed:", username);
+      console.log("Password typed:", password);
+
+      alert("Data captured in console (demo only)");
+    });
+  </script>
+</body>
+</html>
